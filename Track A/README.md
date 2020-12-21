@@ -1,4 +1,4 @@
-# TRACK A Curriculum Overview Course Description:
+# TRACK A - Curriculum Overview:
 
 The program will give students the breadth and depth of knowledge needed to enter or advance their careers in data analytics.  From SQL, python and tableau, to statistical concepts – students will feel more confident and prepared with their analytics abilities.  Students will explore and answer real-life questions from publicly available datasets and practice explaining and presenting their findings to their peers.s field.
 
