@@ -12,6 +12,7 @@ CREATE TABLE student
 );
 
 copy student(first_name,last_name,email,gender,work_phone,book_preference_hardcopy)
+--set the path for file location of student_data.csv
 from 'C:\NITEEN\Training\data\student_data.csv'
 delimiter ',' CSV header
 
@@ -30,6 +31,7 @@ CREATE TABLE student_marks
 );
 
 copy student_marks(student_reg_id,student_id,unit2,unit3,unit4,unit5)
+--set the path for file location of student_marks.csv
 from 'C:\NITEEN\Training\data\student_marks.csv'
 delimiter ',' CSV header
 
