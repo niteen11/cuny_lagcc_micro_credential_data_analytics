@@ -1,0 +1,30 @@
+DROP TABLE IF EXISTS Nurse;
+CREATE TABLE Nurse (
+  EmployeeID INTEGER PRIMARY KEY NOT NULL,
+  Name VARCHAR(30) NOT NULL,
+  Position VARCHAR(30) NOT NULL,
+  Registered BOOLEAN NOT NULL,
+  SSN INTEGER NOT NULL
+);
+
+DROP TABLE IF EXISTS Appointment;
+CREATE TABLE Appointment (
+  AppointmentID INTEGER PRIMARY KEY NOT NULL,
+  Patient INTEGER NOT NULL,    
+  PrepNurse INTEGER,
+  Physician INTEGER NOT NULL,
+  StartDate TIMESTAMP NOT NULL,
+  EndDate TIMESTAMP NOT NULL,
+  ExaminationRoom TEXT NOT NULL,
+  CONSTRAINT fk_Appointment_Patient_SSN FOREIGN KEY(Patient) REFERENCES Patient(SSN),
+  CONSTRAINT fk_Appointment_Nurse_EmployeeID FOREIGN KEY(PrepNurse) REFERENCES Nurse(EmployeeID),
+  CONSTRAINT fk_Appointment_Physician_EmployeeID FOREIGN KEY(Physician) REFERENCES Physician(EmployeeID)
+);
+
+DROP TABLE IF EXISTS Medication;
+CREATE TABLE Medication (
+  Code INTEGER PRIMARY KEY NOT NULL,
+  Name VARCHAR(30) NOT NULL,
+  Brand VARCHAR(30) NOT NULL,
+  Description VARCHAR(30) NOT NULL
+);
